@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:  #f5f7fa;
+
+}
+h1{
+    text-align: center;
+    background-color: #002b5b;
+    color: white;
+    padding: 20px;
+
+}
+ol{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+}
+li{
+    margin: 10px 0;
+
+}
+input{
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 300px;
+}
+label{
+    font-weight: bold;
+}
+button{
+    background-color: 27ae60;
+    color: black;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+
+
+/* Hover effect */
+.contact-btn:hover {
+  background-color: #2f5d8a;
+}
+button:hover{
+    background-color: #219150;
+
+}
+img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 400px;
+    display:block;
+
+}
+.contact-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contact-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* BIG BUTTON STYLE */
+.contact-btn {
+  display: inline-block;
+  background-color: #1e3a5f;
+  color: white;
+  padding: 15px 25px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Hover effect */
+.contact-btn:hover {
+  background-color: #2f5d8a;
+}

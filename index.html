@@ -1,6 +1,7 @@
  <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.min.css">
         <link rel="stylesheet" href="style.css">
         <title>STUDY ABROAD PRO</title>
     </head>
@@ -31,13 +32,17 @@
     <label>Surname</label><br></br>
     <input type="text"name ="surname" required>
      
+     <br>
+     <label>Country</label><br></br>
+     <input type="text" name ="country" required>
+     
     <br>
     <label>Email</label><br></br>
-    <input type="email" required>
+    <input type="email" name="email" required>
      
     <br>
     <label>Mobile number</label><br></br>
-    <input type="number"maxlenght="10" required>
+    <input id="phone" type= "tel" name="phone"  required>
      
     <br>
     <button>SUBMIT</button><br></br>
@@ -47,12 +52,28 @@
     <div class="contact-section">
         <p class="contact-title"><strong>CLICK THE BUTTONS BELOW TO CONTACT US ON :</strong></p>
     
-            <a href="https://instagram.com/studyabroadpro" target="_blank" class="contact-btn">instagram</a>
-            <a href="https://facebook.com/studyabroadpro" target="_blank" class="contact-btn">facebook</a>
+            <a href="https://instagram.com/StudyAbroadPro" target="_blank" class="contact-btn">instagram</a>
+            <a href="https://facebook.com/Studyabroadpro" target="_blank" class="contact-btn">facebook</a>
             <a href="https://wa.me/+263786697820" target= "_blank" class="contact-btn"> Whatsapp</a>
              
    
     </div>
+     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+
+<script>
+  const input = document.querySelector("#phone");
+
+  window.intlTelInput(input, {
+    initialCountry: "auto",
+    geoIpLookup: function(callback) {
+      fetch("https://ipapi.co/json")
+        .then(res => res.json())
+        .then(data => callback(data.country_code))
+        .catch(() => callback("us"));
+    },
+    separateDialCode: true
+  });
+</script>
 
     </body>
 
